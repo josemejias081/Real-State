@@ -6,6 +6,12 @@
   font-style: normal;
 }
 
+.lato-regular {
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -185,4 +191,130 @@ button:hover {
   background: #ffffff80;
   color: #048fbb;
   border: 1px solid #048fbb;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 80%;
+  background: #fff;
+}
+
+.row {
+  width: 100%;
+  margin-top: 150px;
+  display: flex;
+}
+
+.column-left {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 49%;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.column-left::before{
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  left: 0;
+  clip-path: polygon(0 0, 50% 0, 80% 100%, 0% 100%);
+  background-image: linear-gradient(to right, #048fbb 0%, #2ca2d5  51%, #9dddf8  100%);
+
+
+}
+
+
+
+.column-left img {
+  width: 90%;
+  height: 85%;
+  object-fit: cover;
+  display: block;
+  z-index: 2;
+}
+
+.column-right {
+  display: flex;
+  width: 49%;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  line-height: 1.5;
+}
+
+.column-right h2 {
+  font-size: 3.2rem;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.column-right p {
+  margin: 0;
+  font-size: 1.9rem;
+}
+
+.column-right .buttons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.column-right .buttons .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 50px;
+  background-image: linear-gradient(to right, #048fbb 0%, #2ca2d5  51%, #9dddf8  100%);
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #000;
+  text-transform: capitalize;
+}
+
+.cta {
+  width: 100%;
+  display: flex;
+  margin: 60px 0;
+}
+
+.cta .btn {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border: 1px solid #048fbb;
+  background: transparent;
+  padding: 3px;
+  color: #048fbb;
+  cursor: pointer;
+  font-size: 1.8rem;
+  margin-right: 20px;
+  transition: .3s ease all;
+}
+
+.cta .banner {
+  display: inline-block;
+  width: 100%;
+  background-image: url(/sources/house.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  text-align: center;
+  height: 80px;
+  line-height: 80px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #048fbb;
+  text-decoration: none;
+  text-transform: uppercase;
 }
